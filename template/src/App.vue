@@ -6,6 +6,7 @@
 </template>
 
 <script>
+{{#semanticUI}}import 'semantic-ui-css/semantic.min.js'{{/semanticUI}}{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import Hello from './components/Hello'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 export default {
@@ -16,6 +17,7 @@ export default {
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 </script>
 
+{{#semanticUI}}<style src="semantic-ui-css/semantic.min.css"></style>{{/semanticUI}}
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

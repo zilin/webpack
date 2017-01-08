@@ -40,6 +40,14 @@ module.exports = {
         }
       ]
     },
+    "jquery": {
+      "type": "confirm",
+      "message": "Include jQuery in your code?"
+    },
+    "semanticUI": {
+      "type": "confirm",
+      "message": "Include Semantic UI in your code?"
+    },
     "lint": {
       "type": "confirm",
       "message": "Use ESLint to lint your code?"

@@ -1,5 +1,10 @@
 module.exports = {
   root: true,
+  {{#if_or jquery semanticUI}}
+  env: {
+    jquery: true
+  },
+  {{/if_or}}
   parser: 'babel-eslint',
   parserOptions: {
     sourceType: 'module'

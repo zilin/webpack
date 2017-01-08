@@ -1,4 +1,7 @@
 var path = require('path')
+{{#if_or jquery semanticUI}}
+var webpack = require('webpack')
+{{/if_or}}
 var config = require('../config')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
@@ -34,6 +37,11 @@ module.exports = {
   resolveLoader: {
     fallback: [path.join(__dirname, '../node_modules')]
   },
+  {{#if_or jquery semanticUI}}
+  plugins: [
+    new webpack.ProvidePlugin({$: 'jquery', jQuery: 'jquery'}),
+  ],
+  {{/if_or}}
   module: {
     {{#lint}}
     preLoaders: [
